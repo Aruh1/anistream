@@ -18,21 +18,6 @@ var dataURL;
 
 const apiEndpoint = "api.consumet.org";
 
-// Randomly set player iframes to these video onLoad
-var youtubeLinks = [
-    "https://www.youtube.com/embed/3yOVIxOHiaw",
-    "https://www.youtube.com/embed/nfAPAvGGH4g",
-    "https://www.youtube.com/embed/S7W135mNveI",
-    "https://www.youtube.com/embed/X1M69l7ZGlw",
-    "https://www.youtube.com/embed/IUtFAblCT1o",
-    "https://www.youtube.com/embed/Wi6tTATXnaw",
-    "https://www.youtube.com/embed/5xkzzO5nNow",
-    "https://www.youtube.com/embed/PgAswqBtrUk",
-    "https://www.youtube.com/embed/uwwU55zBYlQ"
-];
-var randomLink = youtubeLinks[Math.floor(Math.random() * youtubeLinks.length)];
-videoPlayer.src = randomLink;
-
 // Check URL parameters
 function updateUrl(newUrl) {
     window.history.pushState({}, '', newUrl);
@@ -55,7 +40,7 @@ searchBtn.addEventListener("click", async function () {
     sresultContainer.style.display = `flex`;
     resultContainer.style.display = `grid`;
     mainLoading.style.display = "flex";
-    pageTitle.innerHTML = `astream - watch anime`
+    pageTitle.innerHTML = `anistream - watch anime`
     recentBtn.style.display = "none";
     resultContainer.innerHTML = "";
 
@@ -74,7 +59,7 @@ async function getSearchByEnter(event) {
         sresultContainer.style.display = `flex`;
         resultContainer.style.display = `grid`;
         mainLoading.style.display = "flex";
-        pageTitle.innerHTML = `astream - watch anime`
+        pageTitle.innerHTML = `anistream - watch anime`
         recentBtn.style.display = "none";
         resultContainer.innerHTML = "";
 
@@ -211,7 +196,7 @@ function displayAnimeInfo(data) {
     const title = document.getElementById("videoTitle");
     title.innerHTML = `${data.title}`;
     dataTitle = `${data.title}`;
-    pageTitle.innerHTML = `${data.title.toLowerCase()} - astream`
+    pageTitle.innerHTML = `${data.title.toLowerCase()} - anistream`
 
     const status = document.getElementById("status");
     status.innerHTML = `${data.status}`;
