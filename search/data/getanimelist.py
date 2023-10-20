@@ -6,7 +6,7 @@ import time
 
 url_template = "https://animoasa.glitch.me/animelist/{}"
 start_num = 1
-end_num = 91
+end_num = 94
 animelist = []
 
 for num in range(start_num, end_num + 1):
